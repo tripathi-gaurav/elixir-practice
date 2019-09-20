@@ -32,5 +32,6 @@ defmodule Practice.PracticeTest do
     assert palindrome("madam") == true
     assert palindrome("racecar") == true
     assert palindrome("elixir") == false
+ end
 
 end

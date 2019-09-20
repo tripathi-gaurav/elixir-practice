@@ -4,21 +4,40 @@ defmodule Practice.Calc do
     num
   end
 
+  def is_operator(x) do
+   x == "+" || x == "-" || x == "*" || x == "/" 
+  end
+
+  def precendence(x) do
+   if x == "+" || x == "-" do
+    1
+   else 
+    3
+   end
+  end
+
+  def char_at(x, index) do
+   String.at(x, index)
+  end
+
+  def char_at(x) do
+   start = 0
+   ending = String.length(x)
+  end	
+
+  
+
   def calc(expr) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
-    expr
-    |> String.split(~r/\s+/)
-    |> hd
-    |> parse_float
-    |> :math.sqrt()
-
-    # Hint:
-    # expr
-    # |> split
-    # |> tag_tokens  (e.g. [+, 1] => [{:op, "+"}, {:num, 1.0}]
-    # |> convert to postfix
-    # |> reverse to prefix
-    # |> evaluate as a stack calculator using pattern matching
-  end
+    #map = %{"/"=>4, "*"=>3, "+"=>2, "-"=>1}
+    #values = expr |> String.replace( "(", "( " ) |> String.replace( ")", " )" ) |> String.split(~r/\s+/)
+    #res = ""
+    #stack = []
+    #for n <- values, do:
+    # if Map.has_key?(map, n), do:
+    #  IO.puts(map[n] <> " " <> n)
+    #end
+     expr
+    end
 end
