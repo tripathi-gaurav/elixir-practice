@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="column">
+    <p><%= link "← go back", to: "/" %></p>
+    <h2>Prime factor of <%= @x %></h2>
+    <p>Palindrome results = <%= inspect @y %></p>
+  </div>
+</div>
